@@ -1,7 +1,6 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
 
-/* inter from google fonts*/
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+font-family: "Pretendard", sans-serif;
 
 @tailwind base;
 @tailwind components;
