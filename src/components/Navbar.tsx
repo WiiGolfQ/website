@@ -13,11 +13,16 @@ import {
     ListItemText,
     Drawer,
     IconButton,
+    CssBaseline,
+    ButtonBase,
 } from "@mui/material";
+
 import MenuIconRounded from "@mui/icons-material/MenuRounded";
 import Link from "next/link";
 
 import { useState } from "react";
+
+import "./Navbar.css";
 
 const navItems = [
     {
@@ -62,12 +67,15 @@ const Navbar = () => {
     );
 
     return (
-        <>
+        <Box component="nav" id="navbar">
+            <CssBaseline />
             <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                 <AppBar component="nav">
                     <Toolbar>
                         <Link href="/" passHref>
-                            <Typography variant="h6">WiiGolfQ</Typography>
+                            <Typography variant="h6" color="">
+                                WiiGolfQ
+                            </Typography>
                         </Link>
 
                         <Box
@@ -125,7 +133,7 @@ const Navbar = () => {
                     {drawer}
                 </Drawer>
             </nav>
-        </>
+        </Box>
     );
 };
 

@@ -6,8 +6,8 @@ const themeConfig = {
     link: 'https://github.com/vncz14/wgq-website'
   },
   darkMode: true,
-  primaryHue: 90,
-  primarySaturation: 40,
+  primaryHue: 140,
+  primarySaturation: 47,
 }
 
 export default themeConfig;
