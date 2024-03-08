@@ -1,8 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    experimental: {
-        optimizePackageImports: ["@mantine/core", "@mantine/hooks"],
-    },
-}
+const nextConfig = { output: "standalone" };
 
-export default nextConfig
+export default nextConfig;
