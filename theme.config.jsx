@@ -1,15 +1,13 @@
-import Navbar from '@/components/Navbar'
+import Link from "next/link";
 
 const themeConfig = {
-  logo: <b>hello</b>,
+  logo: <b>WiiGolfQ</b>,
   project: {
     link: 'https://github.com/vncz14/wgq-website'
   },
-  darkMode: false,
-  navbar: {
-    component: Navbar,
-  }
-  // ... other theme options
+  darkMode: true,
+  primaryHue: 140,
+  primarySaturation: 47,
 }
 
 export default themeConfig;

@@ -9,9 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mantine/core": "^7.5.2",
-    "@mantine/hooks": "^7.5.2",
-    "@tabler/icons-react": "^2.47.0",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.12",
+    "@mui/material": "^5.15.12",
     "cssnano": "^6.0.3",
     "next": "^14.1.0",
     "nextra": "^2.13.3",

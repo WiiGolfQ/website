@@ -1,11 +1,10 @@
-import OngoingMatches from "@/components/homepage/OngoingMatches"
-import { HeroImageRight } from "@/components/mantine/HeroImageRight"
+import Hero from "@/components/homepage/Hero";
 
 export default function HomePage() {
     return (
         <main className="">
-            <HeroImageRight />
-            <OngoingMatches />
+            <Hero />
+            <Hero />
         </main>
-    )
+    );
 }
