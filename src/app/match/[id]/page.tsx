@@ -5,8 +5,8 @@ interface Props {
     id: number;
 }
 
-const MatchDetailPage = ({ id }: Props) => {
-    const match = fetchApi(`/match/${id}`);
+const MatchDetailPage = async ({ id }: Props) => {
+    const match = await fetchApi(`/match/${id}`);
     return <MatchDetail match={match} />;
 };
 
