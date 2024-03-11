@@ -5,7 +5,14 @@ import { fetchApi } from "@/lib/fetchApi";
 import { Box, Typography } from "@mui/material";
 
 export default async function HomePage() {
-    const matches = await fetchApi("/match");
+    let matches;
+
+    try {
+        matches = await fetchApi("/match");
+    } catch (error) {
+        console.error(error);
+    }
+
     return (
         <main className="">
             <Hero />
@@ -25,12 +32,16 @@ export default async function HomePage() {
                 >
                     Recent matches
                 </Typography>
-                <CardList
-                    data={matches}
-                    renderItem={(item) => {
-                        return <MatchInfo match={item} />;
-                    }}
-                />
+                {matches ? (
+                    <CardList
+                        data={matches}
+                        renderItem={(item) => {
+                            return <MatchInfo match={item} />;
+                        }}
+                    />
+                ) : (
+                    <Typography variant="h6">Loading...</Typography>
+                )}
             </Box>
         </main>
     );

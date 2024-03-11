@@ -16,7 +16,7 @@ export const fetchApi = async (route: string): Promise<any> => {
     });
 
     if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error("An error occurred while fetching the data");
     }
 
     return await response.json();
