@@ -29,18 +29,6 @@ const navItems = [
         title: "About",
         href: "/about",
     },
-    {
-        title: "Test 1",
-        href: "/test1",
-    },
-    {
-        title: "Test 2",
-        href: "/test2",
-    },
-    {
-        title: "Test 3",
-        href: "/test3",
-    },
 ];
 
 const Navbar = () => {
@@ -51,7 +39,11 @@ const Navbar = () => {
     };
 
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+        <Box
+            id="nav-drawer"
+            onClick={handleDrawerToggle}
+            sx={{ textAlign: "center" }}
+        >
             <List>
                 {navItems.map((item) => (
                     <Link key={item.title} href={item.href} passHref>

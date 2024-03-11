@@ -3,13 +3,20 @@
 import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
+    components: {
+        MuiButtonBase: {
+            defaultProps: {
+                disableRipple: true,
+            },
+        },
+    },
     palette: {
         mode: "dark",
         primary: {
-            main: "#338e51",
+            main: "#297041",
         },
         secondary: {
-            main: "#bf2041",
+            main: "#83162c",
         },
     },
     typography: {
