@@ -1,12 +1,8 @@
 import { fetchApi } from "@/lib/fetchApi";
 import MatchDetail from "./MatchDetail";
 
-interface Props {
-    id: number;
-}
-
-const MatchDetailPage = async ({ id }: Props) => {
-    return <MatchDetail match={null} />;
+const MatchDetailPage = () => {
+    return <h1>test</h1>;
 };
 
 export default MatchDetailPage;
