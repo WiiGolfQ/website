@@ -1,6 +1,11 @@
 import shortenTimestamp from "@/utils/shortenTimestamp";
 import { Box, Grid, Typography } from "@mui/material";
 
+interface Player {
+    user_id: number;
+    username: string;
+}
+
 interface Props {
     match: {
         match_id: number;
@@ -8,8 +13,8 @@ interface Props {
         timestamp_started: string;
         status: string;
         result: string;
-        p1: { discord_id: number; username: string };
-        p2: { discord_id: number; username: string };
+        p1: Player;
+        p2: Player;
         p1_score_formatted: number;
         p2_score_formatted: number;
         p1_mu_before: number;
@@ -37,7 +42,7 @@ const MatchInfo = ({ match }: Props) => (
             <Typography variant="body1">{match.status}</Typography>
         </Box>
         <Grid container spacing={2}>
-            {["1", "2"].map((player) => (
+            {(["1", "2"] as const).map((player) => (
                 <Grid
                     item
                     key={player}
