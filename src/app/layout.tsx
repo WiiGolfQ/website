@@ -5,6 +5,7 @@ import theme from "@/theme";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Navbar from "@/components/Navbar";
+import { Box } from "@mui/material";
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -20,9 +21,16 @@ export default function RootLayout({
         <html lang="en">
             <body>
                 <ThemeProvider theme={theme}>
-                    <CssBaseline />
-                    <Navbar />
-                    {children}
+                    <Box
+                        maxWidth={1200}
+                        display={"flex"}
+                        flexDirection={"column"}
+                        margin={"auto"}
+                    >
+                        <CssBaseline />
+                        <Navbar />
+                        {children}
+                    </Box>
                 </ThemeProvider>
             </body>
         </html>

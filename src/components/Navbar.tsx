@@ -27,7 +27,15 @@ import "./Navbar.css";
 const navItems = [
     {
         title: "About",
-        href: "/about",
+        href: "/docs",
+    },
+    {
+        title: "Games",
+        href: "/game",
+    },
+    {
+        title: "Players",
+        href: "/player",
     },
 ];
 

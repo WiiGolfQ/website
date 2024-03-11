@@ -28,13 +28,13 @@ const MatchInfo = ({ match }: Props) => (
         alignItems="center"
         pt={2}
     >
-        <Typography variant="h5">{match.game.game_name}</Typography>
+        <Typography variant="h6">{match.game.game_name}</Typography>
         <Box display="flex" gap={1} mb={2}>
-            <Typography variant="h6">
+            <Typography variant="body1">
                 {shortenTimestamp(match.timestamp_started)}
             </Typography>
-            <Typography variant="h6">&bull;</Typography>
-            <Typography variant="h6">{match.status}</Typography>
+            <Typography variant="body1">&bull;</Typography>
+            <Typography variant="body1">{match.status}</Typography>
         </Box>
         <Grid container spacing={2}>
             {["1", "2"].map((player) => (
@@ -56,7 +56,7 @@ const MatchInfo = ({ match }: Props) => (
                                 : "secondary.light",
                     }}
                 >
-                    <Typography variant="h4">
+                    <Typography variant="h5">
                         {match[`p${player}`].username}
                     </Typography>
                     <Typography variant="body2" ml={0.5}>
@@ -68,7 +68,7 @@ const MatchInfo = ({ match }: Props) => (
                         {")"}
                     </Typography>
 
-                    <Typography variant="h5">
+                    <Typography variant="h6">
                         {match[`p${player}_score_formatted`]
                             ? match[`p${player}_score_formatted`]
                             : "—"}
