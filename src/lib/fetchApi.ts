@@ -5,7 +5,7 @@ export const fetchApi = async (route: string): Promise<any> => {
     // pretty sure its a nextjs issue, but it was fixed? idk
     // https://github.com/vercel/next.js/pull/54203
 
-    const apiUrl = "http://backend/api";
+    const apiUrl = "http://backend:8000/api";
 
     const response = await fetch(apiUrl + route, {
         method: "GET",
