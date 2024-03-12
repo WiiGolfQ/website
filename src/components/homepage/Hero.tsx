@@ -44,12 +44,12 @@ const Hero = () => {
                         marginTop: 4,
                     }}
                 >
-                    <Link href="/about" passHref>
+                    <Link href="/docs/getting-started" passHref>
                         <Button variant="contained" color="primary">
                             <h2>Get started</h2>
                         </Button>
                     </Link>
-                    <Link href="https://discord.gg" passHref>
+                    <Link href="https://discord.gg/23BzdNkrWU" passHref>
                         <Button
                             variant="outlined"
                             color="primary"
