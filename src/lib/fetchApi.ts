@@ -12,7 +12,7 @@ export const fetchApi = async (route: string): Promise<any> => {
         headers: {
             "Content-Type": "application/json",
         },
-        next: { revalidate: 30 },
+        // next: { revalidate: 30 },
     });
 
     if (!response.ok) {
