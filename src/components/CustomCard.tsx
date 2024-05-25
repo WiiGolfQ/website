@@ -15,7 +15,16 @@ const CustomCard = ({ children, id, href }: Props) => {
     return (
         <Link href={href ? href : ""}>
             <Card sx={{ position: "relative" }}>
-                <CardContent>{children}</CardContent>
+                <CardContent
+                    sx={{
+                        p: 2,
+                        "&:last-child": {
+                            paddingBottom: 2,
+                        },
+                    }}
+                >
+                    {children}
+                </CardContent>
                 {id && (
                     <Box
                         sx={{
@@ -33,7 +42,7 @@ const CustomCard = ({ children, id, href }: Props) => {
                             alignItems: "center",
                         }}
                     >
-                        <Typography variant="body2">#{id}</Typography>
+                        <Typography variant="body2">{id}</Typography>
                     </Box>
                 )}
             </Card>

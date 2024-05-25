@@ -1,5 +1,3 @@
-const MatchDetail = (match: any /* any is temp */) => {
-    return <h1>test</h1>;
-};
+const MatchDetail = (match: any /* any is temp */) => {};
 
 export default MatchDetail;

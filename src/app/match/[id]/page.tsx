@@ -2,7 +2,13 @@ import { fetchApi } from "@/lib/fetchApi";
 import MatchDetail from "./MatchDetail";
 
 const MatchDetailPage = () => {
-    return <h1>test</h1>;
+    let match;
+
+    try {
+        match = fetchApi("/match/");
+    } catch (error) {
+        console.error(error);
+    }
 };
 
 export default MatchDetailPage;
