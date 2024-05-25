@@ -12,6 +12,27 @@ interface Props {
 }
 
 const CustomCard = ({ children, id, href }: Props) => {
+    const idCorner = (
+        <Box
+            sx={{
+                position: "absolute", // Position the box absolutely
+                top: 0,
+                left: 0,
+                minWidth: 30,
+                backgroundColor: "primary.main",
+                color: "white",
+                p: 1,
+                borderRadius: "8px 0 8px 0",
+
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+            }}
+        >
+            <Typography variant="body2">{id}</Typography>
+        </Box>
+    );
+
     const card = (
         <Card sx={{ position: "relative" }}>
             <CardContent
@@ -24,30 +45,11 @@ const CustomCard = ({ children, id, href }: Props) => {
             >
                 {children}
             </CardContent>
-            {id && (
-                <Box
-                    sx={{
-                        position: "absolute", // Position the box absolutely
-                        top: 0,
-                        left: 0,
-                        minWidth: 30,
-                        backgroundColor: "primary.main",
-                        color: "white",
-                        p: 1,
-                        borderRadius: "8px 0 8px 0",
-
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                    }}
-                >
-                    <Typography variant="body2">{id}</Typography>
-                </Box>
-            )}
+            {id && (href ? <Link href={href}>{idCorner}</Link> : idCorner)}
         </Card>
     );
 
-    return href ? <Link href={href}>{card}</Link> : card;
+    return card;
 };
 
 export default CustomCard;

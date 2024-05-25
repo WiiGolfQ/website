@@ -1,28 +1,11 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import CardList from "@/components/CardList";
 import MatchSummary from "@/components/homepage/MatchSummary";
 import { fetchApi } from "@/lib/fetchApi";
 import { Typography } from "@mui/material";
 
-const MatchCards: React.FC = () => {
-    const [matches, setMatches] = useState<any[]>([]);
-
-    useEffect(() => {
-        const fetchMatches = async () => {
-            try {
-                const matches = await fetchApi("/match/");
-                setMatches(matches);
-            } catch (error) {
-                console.error(error);
-            }
-        };
-
-        fetchMatches();
-    }, []);
-
-    console.log(matches);
+const MatchCards = async () => {
+    const matches = await fetchApi("/match/");
 
     return (
         <CardList

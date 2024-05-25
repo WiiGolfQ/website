@@ -6,10 +6,10 @@ import { Box } from "@mui/material";
 
 interface AccordionProps {
     summary: React.ReactNode;
-    details: React.ReactNode;
+    children: React.ReactNode;
 }
 
-export default function Accordion({ summary, details }: AccordionProps) {
+export default function Accordion({ summary, children }: AccordionProps) {
     return (
         <Acc>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
@@ -17,7 +17,7 @@ export default function Accordion({ summary, details }: AccordionProps) {
                     {summary}
                 </Box>
             </AccordionSummary>
-            <AccordionDetails>{details}</AccordionDetails>
+            <AccordionDetails>{children}</AccordionDetails>
         </Acc>
     );
 }
