@@ -17,7 +17,6 @@ const HomepageSection: React.FC<HomepageSectionProps> = ({
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                px: [1, 2],
                 py: 4,
             }}
         >

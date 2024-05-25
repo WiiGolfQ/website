@@ -26,10 +26,13 @@ export default function RootLayout({
                         display={"flex"}
                         flexDirection={"column"}
                         margin={"auto"}
+                        pt={["56px", "64px"]}
                     >
                         <CssBaseline />
                         <Navbar />
-                        {children}
+                        <Box component="main" pt={4} px={[1, 2]}>
+                            {children}
+                        </Box>
                     </Box>
                 </ThemeProvider>
             </body>

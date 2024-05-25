@@ -12,42 +12,42 @@ interface Props {
 }
 
 const CustomCard = ({ children, id, href }: Props) => {
-    return (
-        <Link href={href ? href : ""}>
-            <Card sx={{ position: "relative" }}>
-                <CardContent
+    const card = (
+        <Card sx={{ position: "relative" }}>
+            <CardContent
+                sx={{
+                    p: 2,
+                    "&:last-child": {
+                        paddingBottom: 2,
+                    },
+                }}
+            >
+                {children}
+            </CardContent>
+            {id && (
+                <Box
                     sx={{
-                        p: 2,
-                        "&:last-child": {
-                            paddingBottom: 2,
-                        },
+                        position: "absolute", // Position the box absolutely
+                        top: 0,
+                        left: 0,
+                        minWidth: 30,
+                        backgroundColor: "primary.main",
+                        color: "white",
+                        p: 1,
+                        borderRadius: "8px 0 8px 0",
+
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
                     }}
                 >
-                    {children}
-                </CardContent>
-                {id && (
-                    <Box
-                        sx={{
-                            position: "absolute", // Position the box absolutely
-                            top: 0,
-                            left: 0,
-                            minWidth: 30,
-                            backgroundColor: "primary.main",
-                            color: "white",
-                            p: 1,
-                            borderRadius: "8px 0 8px 0",
-
-                            display: "flex",
-                            justifyContent: "center",
-                            alignItems: "center",
-                        }}
-                    >
-                        <Typography variant="body2">{id}</Typography>
-                    </Box>
-                )}
-            </Card>
-        </Link>
+                    <Typography variant="body2">{id}</Typography>
+                </Box>
+            )}
+        </Card>
     );
+
+    return href ? <Link href={href}>{card}</Link> : card;
 };
 
 export default CustomCard;
