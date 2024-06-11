@@ -54,7 +54,7 @@ const Navbar = () => {
         >
             <List>
                 {navItems.map((item) => (
-                    <CustomLink key={item.title} href={item.href} passHref>
+                    <CustomLink key={item.title} href={item.href}>
                         <ListItem disablePadding>
                             <ListItemButton>
                                 <ListItemText primary={item.title} />
@@ -72,7 +72,7 @@ const Navbar = () => {
             <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                 <AppBar component="nav">
                     <Toolbar>
-                        <CustomLink href="/" passHref>
+                        <CustomLink href="/">
                             <Typography variant="h6" color="">
                                 WiiGolfQ
                             </Typography>

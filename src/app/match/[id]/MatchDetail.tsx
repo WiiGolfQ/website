@@ -27,7 +27,7 @@ const MatchDetail = ({ match }: any /* any is temp */) => {
                             if (!player.mu_after) return "text.disabled";
                             const delta = player.mu_after - player.mu_before;
                             return delta > 0
-                                ? "success"
+                                ? "success.light"
                                 : delta < 0
                                 ? "error"
                                 : "text.disabled";
