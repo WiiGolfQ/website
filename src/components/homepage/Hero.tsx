@@ -1,5 +1,5 @@
 import { Box, Button, Typography } from "@mui/material";
-import Link from "next/link";
+import CustomLink from "@/components/CustomLink";
 
 const Hero = () => {
     return (
@@ -44,12 +44,12 @@ const Hero = () => {
                         marginTop: 4,
                     }}
                 >
-                    <Link href="/docs/getting-started" passHref>
+                    <CustomLink href="/docs/getting-started">
                         <Button variant="contained" color="primary">
                             <h2>Get started</h2>
                         </Button>
-                    </Link>
-                    <Link href="https://discord.gg/23BzdNkrWU" passHref>
+                    </CustomLink>
+                    <CustomLink href="https://discord.gg/23BzdNkrWU">
                         <Button
                             variant="outlined"
                             color="primary"
@@ -57,7 +57,7 @@ const Hero = () => {
                         >
                             <h2>Join the Discord</h2>
                         </Button>
-                    </Link>
+                    </CustomLink>
                 </Box>
             </Box>
             <Box sx={{ height: "100vh", width: 0 }} />

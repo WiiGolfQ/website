@@ -29,9 +29,14 @@ const TeamSummaryRow = ({ team, showTeamNums }: TeamSummaryRowProps) => {
             width={"100%"}
         >
             <Box display="flex" alignItems="center" gap={1}>
-                <Typography variant="body1" color="primary.light" mr={1}>
+                <Typography
+                    sx={{ width: "0.8em" }}
+                    variant="body1"
+                    color="secondary"
+                >
                     {team.place ? team.place : "—"}
                 </Typography>
+
                 {showTeamNums && (
                     <Typography variant="body2">
                         Team {team.team_num}:
@@ -39,8 +44,8 @@ const TeamSummaryRow = ({ team, showTeamNums }: TeamSummaryRowProps) => {
                 )}
                 <PlayerCommaList teamPlayers={team.players} />
             </Box>
-            <Typography variant="body2" color="primary.light">
-                {team.score_formatted ? team.score_formatted : "—"}
+            <Typography variant="body2" color="secondary">
+                {team.score_formatted}
             </Typography>
         </Box>
     );

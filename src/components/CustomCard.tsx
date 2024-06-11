@@ -3,15 +3,16 @@
 import { Box, Typography } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import { Link } from "nextra-theme-docs";
+import CustomLink from "@/components/CustomLink";
 
 interface Props {
     children: React.ReactNode;
     id?: string;
     href?: string;
+    placeholder?: boolean;
 }
 
-const CustomCard = ({ children, id, href }: Props) => {
+const CustomCard = ({ children, id, href, placeholder }: Props) => {
     const idCorner = (
         <Box
             sx={{
@@ -33,7 +34,7 @@ const CustomCard = ({ children, id, href }: Props) => {
         </Box>
     );
 
-    const card = (
+    let card = (
         <Card sx={{ position: "relative" }}>
             <CardContent
                 sx={{
@@ -45,9 +46,16 @@ const CustomCard = ({ children, id, href }: Props) => {
             >
                 {children}
             </CardContent>
-            {id && (href ? <Link href={href}>{idCorner}</Link> : idCorner)}
+            {id &&
+                (href ? (
+                    <CustomLink href={href}>{idCorner}</CustomLink>
+                ) : (
+                    idCorner
+                ))}
         </Card>
     );
+
+    if (href && !id) card = <CustomLink href={href}>{card}</CustomLink>;
 
     return card;
 };

@@ -22,15 +22,21 @@ export default function RootLayout({
             <body>
                 <ThemeProvider theme={theme}>
                     <Box
+                        className="test"
                         maxWidth={1200}
-                        display={"flex"}
-                        flexDirection={"column"}
+                        height={"100vh"}
+                        minHeight={"100vh"}
                         margin={"auto"}
                         pt={["56px", "64px"]}
                     >
                         <CssBaseline />
                         <Navbar />
-                        <Box component="main" pt={4} px={[1, 2]}>
+                        <Box
+                            component="main"
+                            py={[2, 4]}
+                            px={[1, 2]}
+                            height={"100%"}
+                        >
                             {children}
                         </Box>
                     </Box>

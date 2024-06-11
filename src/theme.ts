@@ -1,7 +1,6 @@
 "use client";
 
 import { createTheme } from "@mui/material/styles";
-import Link from "next/link";
 
 const theme = createTheme({
     components: {
@@ -10,18 +9,19 @@ const theme = createTheme({
                 disableRipple: true,
             },
         },
+        MuiLink: {
+            defaultProps: {
+                color: "primary.light",
+            },
+        },
     },
     palette: {
         mode: "dark",
         primary: {
-            main: "#297041",
-            light: "#4caf50",
-            dark: "#1b4e2c",
+            main: "#338e51",
         },
         secondary: {
-            main: "#83162c",
-            light: "#e57373",
-            dark: "#b0120a",
+            main: "#f00060",
         },
     },
     typography: {

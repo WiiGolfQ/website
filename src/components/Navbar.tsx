@@ -18,7 +18,7 @@ import {
 } from "@mui/material";
 
 import MenuIconRounded from "@mui/icons-material/MenuRounded";
-import Link from "next/link";
+import CustomLink from "@/components/CustomLink";
 
 import { useState } from "react";
 
@@ -54,13 +54,13 @@ const Navbar = () => {
         >
             <List>
                 {navItems.map((item) => (
-                    <Link key={item.title} href={item.href} passHref>
+                    <CustomLink key={item.title} href={item.href} passHref>
                         <ListItem disablePadding>
                             <ListItemButton>
                                 <ListItemText primary={item.title} />
                             </ListItemButton>
                         </ListItem>
-                    </Link>
+                    </CustomLink>
                 ))}
             </List>
         </Box>
@@ -72,11 +72,11 @@ const Navbar = () => {
             <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                 <AppBar component="nav">
                     <Toolbar>
-                        <Link href="/" passHref>
+                        <CustomLink href="/" passHref>
                             <Typography variant="h6" color="">
                                 WiiGolfQ
                             </Typography>
-                        </Link>
+                        </CustomLink>
 
                         <Box
                             sx={{
@@ -98,15 +98,14 @@ const Navbar = () => {
 
                             <Box sx={{ display: { xs: "none", sm: "flex" } }}>
                                 {navItems.map((item) => (
-                                    <Link
+                                    <CustomLink
                                         key={item.title}
                                         href={item.href}
-                                        passHref
                                     >
                                         <Button sx={{ color: "#fff" }}>
                                             {item.title}
                                         </Button>
-                                    </Link>
+                                    </CustomLink>
                                 ))}
                             </Box>
                         </Box>

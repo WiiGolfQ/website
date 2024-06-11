@@ -19,8 +19,6 @@ const YtVid = ({ videoId, timestamp }: YtVidProps) => {
         playerVars: { start: timestamp },
     };
 
-    console.log(timestamp);
-
     return (
         <YouTube videoId={videoId} opts={opts} onStateChange={onStateChange} />
     );

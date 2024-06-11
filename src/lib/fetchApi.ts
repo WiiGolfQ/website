@@ -1,4 +1,4 @@
-export const fetchApi = async (route: string): Promise<any> => {
+export const useFetch = async (route: string): Promise<any> => {
     // const apiUrl = process.env.API_URL;
 
     // TODO: env variables are not wanting to work

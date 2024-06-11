@@ -1,7 +1,7 @@
 import shortenTimestamp from "@/utils/shortenTimestamp";
 import { TheaterComedySharp } from "@mui/icons-material";
 import { Box, Grid, Typography } from "@mui/material";
-import Link from "next/link";
+import CustomLink from "@/components/CustomLink";
 import TeamSummaryRow from "@/components/homepage/TeamSummaryRow";
 
 interface Player {
@@ -13,7 +13,31 @@ interface Props {
     match: any;
 }
 
-const MatchInfo = ({ match }: Props) => {
+const MatchInfo = ({
+    match = {
+        game: {
+            game_name: "placeholder",
+        },
+        timestamp_started: "placeholderplaceholder",
+        status: "placeholder",
+        teams: [
+            {
+                pk: 0,
+                place: 0,
+                score_formatted: "placeholder",
+                players: [
+                    {
+                        player: {
+                            discord_id: "placeholder",
+                            username: "placeholder",
+                        },
+                    },
+                ],
+                team_num: 0,
+            },
+        ],
+    },
+}: Props) => {
     return (
         <Box
             className="match-info"

@@ -1,22 +1,31 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import CardList from "@/components/CardList";
-import { fetchApi } from "@/lib/fetchApi";
-import { Typography } from "@mui/material";
+import { useFetch } from "@/lib/useFetch";
+import { Skeleton, Typography } from "@mui/material";
 
-const GamesCards = async () => {
-    const games = await fetchApi("/game");
+const GamesCards = () => {
+    const { data: games, error, isLoading } = useFetch("/game");
+
+    if (error) {
+        return (
+            <Typography variant="h5" color="error">
+                An error occurred.
+            </Typography>
+        );
+    }
 
     return (
         <CardList
             data={games}
-            renderItem={(game) => (
-                <Typography key={game.id} variant="h5">
-                    {game.game_name}
-                </Typography>
+            renderItem={(game = { game_name: "placeholder" }) => (
+                <Typography variant="h5">{game.game_name}</Typography>
             )}
             route="/game"
             slug="shortcode"
             center
+            placeholder={isLoading}
         />
     );
 };
