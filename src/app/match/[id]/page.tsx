@@ -6,7 +6,7 @@ import { Box, Skeleton, Typography } from "@mui/material";
 import { notFound } from "next/navigation";
 
 const MatchDetailPage = ({ params }: { params: { id: string } }) => {
-    let { data: match, error, isLoading } = useFetch(`/match/${params.id}`);
+    const { data: match, error, isLoading } = useFetch(`/match/${params.id}`);
 
     if (error && error.status === 404) {
         return notFound();
@@ -25,7 +25,7 @@ const MatchDetailPage = ({ params }: { params: { id: string } }) => {
         >
             {!error ? (
                 <>
-                    <Typography variant="h5" fontWeight="bold" mb={2}>
+                    <Typography variant="h4" fontWeight="bold" mb={2}>
                         {!isLoading ? (
                             `Match ${match.match_id}: ${match.game.game_name}`
                         ) : (
