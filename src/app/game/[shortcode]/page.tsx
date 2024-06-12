@@ -29,7 +29,7 @@ const GameDetailPage = ({ params }: { params: { shortcode: string } }) => {
                 ]}
             />
             <FetchTable
-                route={`/scores/${params.shortcode}`}
+                route={`/scores/${params.shortcode}?obsolete=true`}
                 columns={[
                     { field: "non_obsolete_rank", headerName: "Rank" },
                     { field: "overall_rank", headerName: "Overall Rank" },
@@ -49,7 +49,7 @@ const GameDetailPage = ({ params }: { params: { shortcode: string } }) => {
                     },
                     {
                         field: "match",
-                        headerName: "match",
+                        headerName: "Match",
                         renderCell: (params) => {
                             return (
                                 <CustomLink href={`/match/${params.row.match}`}>
