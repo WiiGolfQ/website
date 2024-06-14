@@ -16,11 +16,13 @@ const MatchDetailPage = ({ params }: { params: { id: string } }) => {
         <Box
             component="div"
             sx={
-                isLoading && {
-                    display: "flex",
-                    flexDirection: "column",
-                    height: "100%",
-                }
+                isLoading
+                    ? {
+                          display: "flex",
+                          flexDirection: "column",
+                          height: "100%",
+                      }
+                    : {}
             }
         >
             {!error ? (
