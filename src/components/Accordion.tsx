@@ -26,13 +26,15 @@ export default function Accordion({
             <AccordionSummary
                 expandIcon={!disabled && <ExpandMoreIcon />}
                 sx={
-                    disabled && {
-                        // jank to get it to actually recognize it
-                        "&&.MuiButtonBase-root.MuiAccordionSummary-root:hover:not(.Mui-disabled)":
-                            {
-                                cursor: "default",
-                            },
-                    }
+                    disabled
+                        ? {
+                              // jank to get it to actually recognize it
+                              "&&.MuiButtonBase-root.MuiAccordionSummary-root:hover:not(.Mui-disabled)":
+                                  {
+                                      cursor: "default",
+                                  },
+                          }
+                        : {}
                 }
             >
                 <Box width={"100%"} mr={!disabled ? 2 : 0}>
