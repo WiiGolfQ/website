@@ -23,7 +23,7 @@ const GamesCards = () => {
                 <Typography variant="h5">{game.category_name}</Typography>
             )}
             route="/game"
-            slug="game_id"
+            slug="category_id"
             center
             placeholder={isLoading}
         />
