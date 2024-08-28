@@ -20,7 +20,7 @@ const GamesCards = () => {
         <CardList
             data={games}
             renderItem={(game = { game_name: "placeholder" }) => (
-                <Typography variant="h5">{game.game_name}</Typography>
+                <Typography variant="h5">{game.category_name}</Typography>
             )}
             route="/game"
             slug="game_id"
