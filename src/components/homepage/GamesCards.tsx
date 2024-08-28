@@ -6,7 +6,7 @@ import { useFetch } from "@/lib/useFetch";
 import { Skeleton, Typography } from "@mui/material";
 
 const GamesCards = () => {
-    const { data: games, error, isLoading } = useFetch("/game");
+    const { data: games, error, isLoading } = useFetch("/category");
 
     if (error) {
         return (
