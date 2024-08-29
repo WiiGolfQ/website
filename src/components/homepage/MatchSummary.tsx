@@ -47,7 +47,7 @@ const MatchInfo = ({
             alignItems="center"
             width="100%"
         >
-            <Typography variant="h6">{match.game.category_name}</Typography>
+            <Typography variant="h6">{match.category.category_name}</Typography>
             <Box display="flex" gap={1} mb={2}>
                 <Typography variant="body1">
                     {shortenTimestamp(match.timestamp_started)}

@@ -6,7 +6,7 @@ import { useFetch } from "@/lib/useFetch";
 import { Skeleton, Typography } from "@mui/material";
 
 const GamesCards = () => {
-    const { data: games, error, isLoading } = useFetch("/category");
+    const { data: categories, error, isLoading } = useFetch("/category");
 
     if (error) {
         return (
@@ -18,9 +18,9 @@ const GamesCards = () => {
 
     return (
         <CardList
-            data={games}
-            renderItem={(game = { category_name: "placeholder" }) => (
-                <Typography variant="h5">{game.category_name}</Typography>
+            data={categories}
+            renderItem={(category = { category_name: "placeholder" }) => (
+                <Typography variant="h5">{category.category_name}</Typography>
             )}
             route="/game"
             slug="category_id"
