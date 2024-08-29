@@ -10,7 +10,9 @@ cd website
 npm i
 npm run dev
 ```
-
 The website should be up at http://localhost:3000.
 
+## Editing the docs
+
+See instructions for editing the docs [here](https://github.com/WiiGolfQ/website/blob/main/src/pages/docs/editing-these-docs.mdx).
 
