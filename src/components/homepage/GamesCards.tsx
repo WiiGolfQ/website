@@ -19,7 +19,7 @@ const GamesCards = () => {
     return (
         <CardList
             data={games}
-            renderItem={(game = { game_name: "placeholder" }) => (
+            renderItem={(game = { category_name: "placeholder" }) => (
                 <Typography variant="h5">{game.category_name}</Typography>
             )}
             route="/game"

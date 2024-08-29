@@ -29,7 +29,7 @@ const MatchDetailPage = ({ params }: { params: { id: string } }) => {
                 <>
                     <Typography variant="h4" fontWeight="bold" mb={2}>
                         {!isLoading ? (
-                            `Match ${match.match_id}: ${match.game.game_name}`
+                            `Match ${match.match_id}: ${match.category.category_name}`
                         ) : (
                             <Skeleton variant="text" width={200} />
                         )}
