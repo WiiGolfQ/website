@@ -15,6 +15,7 @@
     "@mui/material": "^5.15.12",
     "@mui/x-data-grid": "^7.6.2",
     "cssnano": "^6.0.3",
+    "dayjs": "^1.11.13",
     "next": "^14.1.0",
     "nextra": "^2.13.3",
     "nextra-theme-docs": "^2.13.3",
