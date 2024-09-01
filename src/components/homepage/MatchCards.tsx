@@ -7,7 +7,7 @@ import { useFetch } from "@/lib/useFetch";
 import { Typography } from "@mui/material";
 
 const MatchCards = () => {
-    const { data: matches, error, isLoading } = useFetch("/match/");
+    const { data: matches, error, isLoading } = useFetch("/match");
 
     if (error) {
         return (
