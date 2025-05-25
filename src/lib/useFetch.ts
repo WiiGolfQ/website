@@ -27,7 +27,7 @@ export const useFetch = (route: string) => {
     // pretty sure its a nextjs issue, but it was fixed? idk
     // https://github.com/vercel/next.js/pull/54203
 
-    const apiUrl = "https://api.four.courses/v1";
+    const apiUrl = "https://api.914000.xyz/v1";
 
     const { data, error, isLoading } = useSWR(`${apiUrl}${route}`, fetcher);
 
